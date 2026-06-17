@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
+import "@mantine/spotlight/styles.css";
 import "./globals.css";
 import { theme } from "@/lib/theme";
+import { AppShellWrapper } from "@/components/layout/AppShellWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,7 +38,7 @@ export default function RootLayout({
       </head>
       <body>
         <MantineProvider theme={theme} defaultColorScheme="auto">
-          {children}
+          <AppShellWrapper>{children}</AppShellWrapper>
         </MantineProvider>
       </body>
     </html>
