@@ -65,8 +65,7 @@ export function Hero() {
                 <Text maw={520}>
                   Three years deep in React and Mantine, with a habit of poking
                   at whatever&apos;s new. This site&apos;s interactive bits —
-                  the theme customizer, the command palette, this sentence — are
-                  the portfolio.
+                  the command palette, this sentence — are the portfolio.
                 </Text>
                 {!isCoarsePointer && (
                   <ActionIcon
