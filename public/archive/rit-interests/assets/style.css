@@ -1,0 +1,121 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #ffdaad;
+	color: #232323;
+}
+
+/* header is centered and spans the full page. */
+header {
+	text-align: center;
+	background-color: #513127;
+	color: #f2f2f2;
+	width: 100%;
+	padding: .5em;
+	margin: 0;
+}
+
+/* navigation bar. Shows as a list on mobile, shows as a bar on desktop */
+nav {
+	display: block;
+	background-color: #F36E21;
+	font-size: 16pt;
+	padding-left: 20%;
+	padding-right: 20%;
+	margin: 0;
+}
+
+@media only screen and (min-width: 700px) {
+	nav {
+		display: flex;
+		justify-content: space-around;
+		background-color: #F36E21;
+		font-size: 16pt;
+		padding-left: 20%;
+		padding-right: 20%;
+	}
+	
+	ul.navMenu {
+		display: none;
+		list-style: none;
+		width: 250px;
+		position: absolute;
+		margin: 0;
+		padding: 1em;
+		z-index: 2;
+		background-color: #F36E21;
+		text-align: center;
+	}
+}
+
+nav a:link {
+	color: #f9f9f9;
+	text-decoration: none;
+}
+
+nav a:visited {
+	color: #f9f9f9;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: #f9f9f9;
+	text-decoration: underline;
+}
+
+ /* Main content stays within a 900px border, centered if viewport is wider */
+#content {
+	max-width: 900px;
+	margin: auto;
+	padding: 0 .2em;
+}
+
+a:hover {
+	color: #b0b2c1;
+}
+
+/* right class floats items right on desktop, remains block on mobile. Class is designed for images with captions */
+.right {
+	text-align: center;
+	font-size: 8pt;
+}
+
+@media only screen and (min-width: 700px){
+	.right {
+		float: right;
+		text-align: center;
+		font-size: 8pt;
+	}
+}
+
+/* left class floats items left on desktop, remains block on mobile. Class is designed for images with captions */
+.left {
+	text-align: center;
+	font-size: 8pt;
+}
+
+@media only screen and (min-width: 700px){
+	.left {
+		float: left;
+		text-align: center;
+		font-size: 8pt;
+		margin-right: .5em;
+		margin-bottom: 1.5em;
+	}
+}
+
+/* clear floated elements */
+.clear {
+	clear: both;
+}
+	
+/* footer uses small text and is always centered */
+footer {
+	text-align: center;
+	font-size: 8pt;
+}
+
+/* Text area styling */
+textarea {
+	font-family: Arial, sans-serif;
+	resize: none;
+}

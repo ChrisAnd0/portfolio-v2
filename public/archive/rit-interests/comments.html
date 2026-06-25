@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Comments - RIT Local Interests</title>
+		<link rel="stylesheet" type="text/css" href="assets/style.css" />
+		<script src="assets/scripts.js"></script>
+		<script type="text/javascript">
+			function validate() {
+				//check for inputs having data
+				if (document.getElementById('name').value=='') {
+					document.getElementById('name').style.borderColor="red";
+					return false;
+				} else if (document.getElementById('comment').value=='Your Comment Here' || document.getElementById('comment').value=='') {
+					document.getElementById('comment').style.borderColor="red";
+					return false;
+				} else {
+					return true;
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<!--Page heading-->
+		<header>
+			<h1>RIT Local Interests</h1>
+		</header>
+
+		<!-- Main navigation-->
+		<nav>
+			<div class="navButton">
+				<p><a href="index.html">Home</a></p>
+			</div>
+
+			<div class="navButton" onmouseout="hideMenu(this)" onmouseover="displayMenu(this)">
+				<p><a href="on/index.html">On-Campus</a></p>
+
+				<ul class="navMenu">
+					<li><a href="on/dtunnel.html">Dorm Tunnels</a></li>
+					<li><a href="on/atunnel.html">Academic Tunnels</a></li>
+					<li><a href="on/outdoor.html">Getting Around Outdoors</a></li>
+					<li><a href="on/study.html">Study Areas</a></li>
+					<li><a href="on/bus.html">Taking the Bus</a></li>
+					<li><a href="on/drive.html">Driving and Parking</a></li>
+				</ul>
+			</div>
+
+			<div class="navButton" onmouseout="hideMenu(this)" onmouseover="displayMenu(this)">
+				<p><a href="off/index.html">Off-Campus</a></p>
+
+				<ul class="navMenu">
+					<li><a href="off/parkpoint.html">Park Point</a></li>
+					<li><a href="off/jefferson.html">Jefferson Road</a></li>
+					<li><a href="off/marketplace.html">Marketplace Mall</a></li>
+					<li><a href="off/north.html">Heading North</a></li>
+				</ul>
+			</div>
+
+			<div class="navButton">
+				<p><a href="comments.html">Comments</a></p>
+			</div>
+		</nav>
+
+		<!--Page content-->
+		<div id="content">
+			<h2>Leave a comment about the page!</h2>
+
+			<p>Note that any comments will be published publically. Don't post any personal information or offensive material.</p>
+
+			<!-- Submission Form -->
+			<form action="comments.php" method="get" onsubmit="return validate()">
+				Name: <input id="name" type="text" name="usn" /> <br /><br />
+				Comment:<br />
+				<textarea id="comment" name="comment" rows="4" cols="60">Your Comment Here</textarea> <br /><br />
+				<input type="submit" value="Submit!" />
+			</form>
+
+			<!-- Previous Comments, pulled from database -->
+			<h3>Comments</h3>
+
+			No comments
+		</div>
+
+		<!--Footer, about page links to the grading guide-->
+		<footer>
+			<p>&copy;Chris Omahen, 2017<br />
+			<a href="about.html">About</a></p>
+		</footer>
+	</body>
+</html>

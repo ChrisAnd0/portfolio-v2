@@ -4,3 +4,6 @@ out
 build
 .vercel
 next-env.d.ts
+
+# Archived legacy sites — frozen as-is, not reformatted
+public/archive
