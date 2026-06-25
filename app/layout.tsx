@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 import "@mantine/spotlight/styles.css";
+import "@mantine/notifications/styles.css";
 import "./globals.css";
 import { theme } from "@/lib/theme";
 import { AppShellWrapper } from "@/components/layout/AppShellWrapper";
