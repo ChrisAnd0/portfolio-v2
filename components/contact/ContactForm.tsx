@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Stack, TextInput, Textarea } from "@mantine/core";
+import { Anchor, Button, Stack, TextInput, Textarea } from "@mantine/core";
 import { schemaResolver, useForm } from "@mantine/form";
 import { notifications } from "@mantine/notifications";
 import { contactSchema, type ContactFormValues } from "@/lib/validation";
@@ -24,7 +24,15 @@ export function ContactForm() {
       notifications.show({
         color: "red",
         title: "Couldn't send message",
-        message: "Something went wrong — try again, or email me directly.",
+        message: (
+          <>
+            Something went wrong — try again, or{" "}
+            <Anchor href="mailto:me@chrisomahen.com" c="red">
+              email me directly
+            </Anchor>
+            .
+          </>
+        ),
         position: "top-right",
       });
       return;

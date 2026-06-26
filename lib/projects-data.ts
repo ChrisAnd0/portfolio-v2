@@ -19,6 +19,7 @@ export const projects: Project[] = [
     description:
       "This site, rebuilt from scratch in Next.js and Mantine — including a Ctrl+K command palette and the live GitHub activity feed below.",
     tags: ["Next.js", "TypeScript", "Mantine", "Framer Motion"],
+    thumbnail: "/projects/thumbs/this-portfolio.png",
     sourceHref: "https://github.com/ChrisAnd0/portfolio-v2",
   },
   {
@@ -34,7 +35,7 @@ export const projects: Project[] = [
   {
     title: "Loveca Card Database & Deckbuilder",
     description:
-      "A card database and deckbuilder for the Love Live! Series Official Card Game (Loveca).",
+      "A card database and deckbuilder for the Love Live! Series Official Card Game (Loveca), featuring English translations and advanced filtering options.",
     tags: [],
     badge: "Coming Soon",
   },

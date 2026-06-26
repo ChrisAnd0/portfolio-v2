@@ -21,16 +21,15 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <Container size="xs" py="xl">
-      <Stack gap="xl">
-        <Stack gap="xs">
-          <Title order={1}>Contact</Title>
-          <Text c="dimmed">
-            Have a role, a project, or just want to talk shop? Send a message
-            below.
-          </Text>
-        </Stack>
+    <Container size="md" py="xl">
+      <Stack gap="xs" mb={20}>
+        <Title order={1}>Contact</Title>
+        <Text c="dimmed">
+          Have a role, a project, or just want to chat? Send a message below.
+        </Text>
+      </Stack>
 
+      <Stack gap="xl" maw={580} mx="auto">
         <ContactForm />
 
         <Text size="sm" c="dimmed" ta="center">

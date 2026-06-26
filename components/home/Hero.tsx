@@ -64,16 +64,18 @@ export function Hero() {
 
             <motion.div variants={item}>
               <Text size="lg" c="dimmed" maw={480}>
-                I build interfaces that feel as good as they work.
+                I build interfaces that feel as good as they look.
               </Text>
             </motion.div>
 
             <motion.div variants={item}>
               <Group gap={6} justify="center" wrap="nowrap">
                 <Text maw={520}>
-                  Three years deep in React and Mantine, with a habit of poking
-                  at whatever&apos;s new. This site&apos;s interactive bits —
-                  the command palette, this sentence — are the portfolio.
+                  Three years deep in React and Mantine, I like to catch the
+                  details others overlook and focus on usability, while always
+                  poking around at whatever&apos;s new. This site and its
+                  interactive bits — the command palette, this sentence — are
+                  the portfolio.
                 </Text>
                 {!isCoarsePointer && (
                   <ActionIcon

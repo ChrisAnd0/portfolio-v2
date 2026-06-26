@@ -18,7 +18,7 @@ export const archiveItems: Project[] = [
     title: "Gate Zero Card Game Blog",
     badge: "2016",
     description:
-      "A blog built for a course at RIT, written as a competitive Japanese TCG player for what I played at the time (Luck & Logic, Weiß Schwarz) — strategy articles, card analysis, and tournament results, preserved exactly as it was originally published.",
+      "A blog built for a course at RIT, written as a competitive Japanese TCG player for what I played at the time (Luck & Logic, Weiß Schwarz) — strategy articles, card analysis, and tournament results.",
     tags: ["HTML", "CSS"],
     thumbnail: "/archive/thumbs/gate-zero.png",
     href: "/archive/gate-zero/index.html",

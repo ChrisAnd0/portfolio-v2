@@ -59,7 +59,10 @@ async function describePush(
   try {
     const res = await fetch(
       `https://api.github.com/repos/${repo}/compare/${before}...${head}`,
-      { headers: { Accept: "application/vnd.github+json" } },
+      {
+        headers: { Accept: "application/vnd.github+json" },
+        next: { revalidate },
+      },
     );
     if (!res.ok) return fallback;
 

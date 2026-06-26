@@ -30,7 +30,7 @@ export function Header() {
           Chris Omahen
         </Text>
 
-        <Group gap="xs" visibleFrom="sm">
+        <Group gap="xs" visibleFrom="md">
           {navLinks.map((link) => (
             <NavLink
               key={link.href}
@@ -67,7 +67,7 @@ export function Header() {
           <Burger
             opened={mobileNavOpened}
             onClick={toggleMobileNav}
-            hiddenFrom="sm"
+            hiddenFrom="md"
             size="sm"
             aria-label={
               mobileNavOpened ? "Close navigation menu" : "Open navigation menu"
@@ -80,7 +80,7 @@ export function Header() {
         opened={mobileNavOpened}
         onClose={closeMobileNav}
         title="Menu"
-        hiddenFrom="sm"
+        hiddenFrom="md"
         size="xs"
         padding="md"
       >

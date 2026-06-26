@@ -5,7 +5,7 @@ import { ProjectCard } from "@/components/projects/ProjectCard";
 import { projects } from "@/lib/projects-data";
 
 const description =
-  "Projects Chris Omahen is actively building and maintaining, plus a live feed of recent GitHub activity.";
+  "Current projects from Chris Omahen, including this site, plus a live feed of recent GitHub activity.";
 
 export const metadata: Metadata = {
   title: "Projects",
