@@ -1,15 +1,6 @@
 "use client";
 
-import {
-  Badge,
-  Button,
-  Card,
-  Group,
-  Image,
-  Stack,
-  Text,
-  Title,
-} from "@mantine/core";
+import { Badge, Button, Card, Group, Stack, Text, Title } from "@mantine/core";
 import {
   IconArrowRight,
   IconBrandGithub,
@@ -17,6 +8,7 @@ import {
   type Icon,
 } from "@tabler/icons-react";
 import { motion, type Variants } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import type { LinkIconKey, Project } from "@/lib/projects-data";
 
@@ -44,12 +36,15 @@ export function ProjectCard({ project }: { project: Project }) {
       <Card withBorder padding="lg" radius="md" h="100%">
         {project.thumbnail && (
           <Card.Section>
-            <Image
-              src={project.thumbnail}
-              alt={project.title}
-              h={160}
-              fit="cover"
-            />
+            <div style={{ position: "relative", height: 160 }}>
+              <Image
+                src={project.thumbnail}
+                alt={project.title}
+                fill
+                sizes="(max-width: 768px) 100vw, 480px"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
           </Card.Section>
         )}
         <Stack
@@ -60,7 +55,7 @@ export function ProjectCard({ project }: { project: Project }) {
         >
           <Stack gap="xs">
             <Group justify="space-between" align="flex-start" wrap="nowrap">
-              <Title order={3} fz="lg" style={{ flex: 1, minWidth: 0 }}>
+              <Title order={2} fz="lg" style={{ flex: 1, minWidth: 0 }}>
                 {project.title}
               </Title>
               {project.badge && (

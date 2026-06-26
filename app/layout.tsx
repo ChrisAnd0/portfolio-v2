@@ -18,9 +18,38 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteDescription =
+  "Portfolio of Chris Omahen, a software engineer with three years of professional React and Mantine experience.";
+
 export const metadata: Metadata = {
-  title: "Chris Omahen - Portfolio",
-  description: "Portfolio of Chris Omahen",
+  metadataBase: new URL("https://chrisomahen.com"),
+  title: {
+    default: "Chris Omahen - Software Engineer",
+    template: "%s | Chris Omahen",
+  },
+  description: siteDescription,
+  authors: [{ name: "Chris Omahen", url: "https://chrisomahen.com" }],
+  keywords: [
+    "Chris Omahen",
+    "Software Engineer",
+    "React",
+    "Mantine",
+    "Next.js",
+    "TypeScript",
+  ],
+  openGraph: {
+    title: "Chris Omahen - Software Engineer",
+    description: siteDescription,
+    url: "/",
+    siteName: "Chris Omahen",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Chris Omahen - Software Engineer",
+    description: siteDescription,
+  },
 };
 
 export default function RootLayout({

@@ -23,7 +23,7 @@ export function CareerTimeline() {
             viewport={{ once: true, margin: "-80px" }}
             variants={item}
           >
-            <Title order={4}>{entry.role}</Title>
+            <Title order={3}>{entry.role}</Title>
             <Text size="sm" c="dimmed">
               {entry.org} · {entry.period}
               {entry.location ? ` · ${entry.location}` : ""}

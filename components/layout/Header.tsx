@@ -69,6 +69,9 @@ export function Header() {
             onClick={toggleMobileNav}
             hiddenFrom="sm"
             size="sm"
+            aria-label={
+              mobileNavOpened ? "Close navigation menu" : "Open navigation menu"
+            }
           />
         </Group>
       </Group>

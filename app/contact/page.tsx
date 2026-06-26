@@ -1,5 +1,23 @@
 import { Anchor, Container, Stack, Text, Title } from "@mantine/core";
+import type { Metadata } from "next";
 import { ContactForm } from "@/components/contact/ContactForm";
+
+const description = "Get in touch with Chris Omahen about a role or project.";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description,
+  openGraph: {
+    title: "Contact | Chris Omahen",
+    description,
+    images: "/opengraph-image",
+  },
+  twitter: {
+    title: "Contact | Chris Omahen",
+    description,
+    images: "/opengraph-image",
+  },
+};
 
 export default function ContactPage() {
   return (

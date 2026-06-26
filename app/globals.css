@@ -24,3 +24,14 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+/* Mantine's default light-mode "dimmed" and gray-outline colors (gray.6,
+   #868e96) are only a 3.32:1 contrast ratio on white — below the 4.5:1
+   WCAG AA minimum for normal text. #767676 is the lightest neutral gray
+   that still clears the 4.5:1 floor (4.54:1), chosen over gray.7 to stay
+   closer to the original lighter look. Dark mode already uses lighter,
+   high-contrast shades for both, so it's left untouched. */
+:root[data-mantine-color-scheme="light"] {
+  --mantine-color-dimmed: #767676;
+  --mantine-color-gray-outline: #767676;
+}

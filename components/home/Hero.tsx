@@ -13,8 +13,16 @@ import {
 import { useMediaQuery } from "@mantine/hooks";
 import { IconDownload, IconUfo } from "@tabler/icons-react";
 import { motion, type Variants } from "framer-motion";
+import dynamic from "next/dynamic";
 import Link from "next/link";
-import { BulletHellOverlay } from "./bullet-hell/BulletHellOverlay";
+
+const BulletHellOverlay = dynamic(
+  () =>
+    import("./bullet-hell/BulletHellOverlay").then(
+      (mod) => mod.BulletHellOverlay,
+    ),
+  { ssr: false },
+);
 
 const container: Variants = {
   hidden: {},

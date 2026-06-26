@@ -1,6 +1,25 @@
 import { Container, Stack, Title } from "@mantine/core";
+import type { Metadata } from "next";
 import { CareerTimeline } from "@/components/about/CareerTimeline";
 import { SkillsGrid } from "@/components/about/SkillsGrid";
+
+const description =
+  "Skills and career timeline for Chris Omahen, covering React, Mantine, and the tools behind them.";
+
+export const metadata: Metadata = {
+  title: "About",
+  description,
+  openGraph: {
+    title: "About | Chris Omahen",
+    description,
+    images: "/opengraph-image",
+  },
+  twitter: {
+    title: "About | Chris Omahen",
+    description,
+    images: "/opengraph-image",
+  },
+};
 
 export default function AboutPage() {
   return (

@@ -86,30 +86,49 @@ export function GithubActivityFeed() {
       {items.map((item) => {
         const ItemIcon = iconForType[item.type] ?? IconGitCommit;
         return (
-          <Group
-            key={item.id}
-            justify="space-between"
-            align="flex-start"
-            wrap="nowrap"
-          >
-            <Group gap="xs" align="flex-start" wrap="nowrap">
-              <ItemIcon size={16} style={{ marginTop: 3, flexShrink: 0 }} />
-              <Text size="sm">
-                {item.description}{" "}
-                <Anchor
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  size="sm"
-                >
-                  {item.repo}
-                </Anchor>
+          <Stack key={item.id} gap={2}>
+            <Group justify="space-between" align="flex-start" wrap="nowrap">
+              <Group gap="xs" align="flex-start" wrap="nowrap">
+                <ItemIcon size={16} style={{ marginTop: 3, flexShrink: 0 }} />
+                <Text size="sm">
+                  {item.description}{" "}
+                  <Anchor
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    size="sm"
+                  >
+                    {item.repo}
+                  </Anchor>
+                </Text>
+              </Group>
+              <Text size="xs" c="dimmed" style={{ flexShrink: 0 }}>
+                {formatRelativeTime(item.createdAt)}
               </Text>
             </Group>
-            <Text size="xs" c="dimmed" style={{ flexShrink: 0 }}>
-              {formatRelativeTime(item.createdAt)}
-            </Text>
-          </Group>
+            {item.detail && (
+              <Text
+                size="xs"
+                c="dimmed"
+                ml={24}
+                style={{ fontStyle: "italic" }}
+              >
+                {item.detailUrl ? (
+                  <Anchor
+                    href={item.detailUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    size="xs"
+                    c="dimmed"
+                  >
+                    “{item.detail}”
+                  </Anchor>
+                ) : (
+                  <>“{item.detail}”</>
+                )}
+              </Text>
+            )}
+          </Stack>
         );
       })}
     </Stack>
