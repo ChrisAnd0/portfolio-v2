@@ -33,10 +33,14 @@ export const projects: Project[] = [
     sourceHref: "https://github.com/ChrisAnd0/portfolio-v2",
   },
   {
-    title: "Loveca Card Database & Deckbuilder",
+    title: "Loveca Notes",
     description:
       "A card database and deckbuilder for the Love Live! Series Official Card Game (Loveca), featuring English translations and advanced filtering options.",
-    tags: [],
-    badge: "Coming Soon",
+    tags: ["Next.js", "TypeScript", "Tailwind", "shadcn/ui", "Supabase"],
+    href: "https://lovecanotes.com/",
+    linkLabel: "Visit the site (WIP)",
+    external: true,
+    sourceHref: "https://github.com/ChrisAnd0/loveca-notes",
+    badge: "In Development",
   },
 ];
