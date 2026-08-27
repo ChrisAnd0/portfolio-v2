@@ -98,7 +98,7 @@ export function Hero() {
                 </Button>
                 <Button
                   component="a"
-                  href="/resume.pdf"
+                  href="/resume.docx"
                   target="_blank"
                   rel="noopener noreferrer"
                   variant="default"
